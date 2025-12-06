@@ -3,6 +3,9 @@
 # ide settings
 .idea
 
+# husky
+.husky/.gitignore
+
 # dependencies
 /node_modules
 /.pnp

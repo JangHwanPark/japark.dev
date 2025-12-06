@@ -1,5 +1,7 @@
 {
   "name": "japark.dev",
+  "description": "janghwan portfolio",
+  "author": "janghwan wkd5878@gmail.com",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +12,18 @@
     "lint:fix": "next lint --fix",
     "format": "prettier --write .",
     "test": "vitest",
-    "test:watch": "vitest --watch"
+    "test:run": "vitest run",
+    "test:watch": "vitest --watch",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix --cache",
+      "prettier --write"
+    ],
+    "*.{css,json,md}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -29,17 +42,25 @@
   "devDependencies": {
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@types/gsap": "^3.0.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@typescript-eslint/eslint-plugin": "^8.48.1",
+    "@typescript-eslint/parser": "^8.48.1",
+    "@vitejs/plugin-react": "^5.1.1",
+    "@vitest/coverage-v8": "^4.0.15",
     "autoprefixer": "^10.4.22",
     "eslint": "^9",
     "eslint-config-next": "15.5.6",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-testing-library": "^7.13.5",
     "husky": "^9.1.7",
+    "jsdom": "^27.2.0",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.7.4",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "tailwindcss": "^4",
