@@ -27,13 +27,14 @@
     }
   },
   "include": [
-    "next-env.d.ts",
+    "**/*.js",
+    "**/*.json",
+    "**/*.jsx",
     "**/*.ts",
     "**/*.tsx",
-    "**/*.js",
-    "**/*.jsx",
-    "**/*.json",
-    "src/types/*.d.ts"
+    "next-env.d.ts",
+    "src/types/*.d.ts",
+    ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules"]
 }
