@@ -19,6 +19,12 @@
 
   --color-wt-primary: #f0f1f2;
   --color-wt-primary-light: #a1a6b4;
+
+  --color-yellow: #ffd700;
+  --color-acccent: #08d9d6;
+  --color-success: #4caf50;
+  --color-warning: #ff9f43;
+  --color-danger: #e74c3c;
 }
 
 /* HTML Elements */
