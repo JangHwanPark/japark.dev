@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { cn, NavMenu } from '@/shared';
 import { X, Menu } from 'lucide-react';

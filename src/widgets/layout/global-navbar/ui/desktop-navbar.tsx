@@ -1,3 +1,4 @@
+'use client';
 import React from 'react';
 import { NavMenu } from '@/shared';
 import Link from 'next/link';
