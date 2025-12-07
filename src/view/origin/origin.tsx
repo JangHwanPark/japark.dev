@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, cn } from '@/shared';
+import { Avatar, cn, Line } from '@/shared';
 
 /*interface OriginProps {
 
@@ -21,6 +21,16 @@ export const Origin = () => {
         />
         <Avatar.Fallback>JangHwan Park</Avatar.Fallback>
       </Avatar.Root>
+      {/* Line */}
+      <Line.Linear />
+      <Line.Root>
+        <Line.CurveFirst className="h-52 lg:ml-38 lg:w-8/12 xl:ml-112 xl:w-6/12" />
+        <Line.CurveLast className="h-72 w-4/12 lg:ml-38 xl:ml-112" />
+      </Line.Root>
+      <Line.Root className="mt-12">
+        <Line.CurveFirst className="ml-56 h-52 w-6/12 border-b-2 pl-4" />
+        <Line.CurveLast className="ml-56 h-72 w-full" />
+      </Line.Root>
     </section>
   );
 };
