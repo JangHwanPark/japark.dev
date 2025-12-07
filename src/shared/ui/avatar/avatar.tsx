@@ -1,7 +1,8 @@
 import React from 'react';
-import { Avatar as RadixAvatar } from '@radix-ui/react-avatar';
+import * as RadixAvatar from '@radix-ui/react-avatar';
 import { cn } from '@/shared';
 
+// TODO: props 로 받도록 수정해야함
 const imgSize =
   'rounded-full lg:rounded-lg w-62 h-62 sm:w-80 sm:h-80 lg:w-[410px] xl:w-[410px] lg:h-[410px] xl:h-[450px]';
 
@@ -10,6 +11,8 @@ const AvatarBackground = () => {
 };
 
 export const Avatar = {
-  ...RadixAvatar,
+  Root: RadixAvatar.Root,
+  Image: RadixAvatar.Image,
+  Fallback: RadixAvatar.Fallback,
   Background: AvatarBackground,
 };
