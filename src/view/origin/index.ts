@@ -1,1 +1,1 @@
-export { Origin } from './origin';
+export { OriginView } from './origin-view';
