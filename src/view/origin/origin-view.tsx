@@ -1,10 +1,6 @@
 import React from 'react';
 
-/*interface OriginProps {
-
-};*/
-
-export const Origin = () => {
+export const OriginView = () => {
   return (
     <section id="origin-section" aria-labelledby="origin-heading">
       <div>
