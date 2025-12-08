@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { OriginView, TechView, PlaygroundView } from '@/view';
+import { MilestonesView, OriginView, PlaygroundView, TechView } from '@/view';
 
 export default function Home() {
   return (
@@ -8,6 +8,7 @@ export default function Home() {
         <OriginView />
         <TechView />
         <PlaygroundView />
+        <MilestonesView />
         <Image
           className="dark:invert"
           src="/next.svg"
