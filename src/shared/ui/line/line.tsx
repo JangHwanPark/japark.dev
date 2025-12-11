@@ -19,7 +19,7 @@ const lineStyle = 'text-yellow hidden w-full lg:block pointer-events-none';
 // ------------------------------------
 const LineRoot = ({ className, children }: LineProps) => {
   return (
-    <div role="presentation" className={cn(lineStyle, className)} aria-hidden={true}>
+    <div id="line-root" role="presentation" className={cn(lineStyle, className)} aria-hidden={true}>
       {children}
     </div>
   );
