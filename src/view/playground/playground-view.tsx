@@ -1,4 +1,5 @@
 import React from 'react';
+import {ProjectCard} from "@/features";
 
 export const PlaygroundView = () => {
   return (
@@ -8,12 +9,13 @@ export const PlaygroundView = () => {
           Playground
         </h2>
       </header>
-      <ol className="relative mb-0 flex w-full gap-10 before:absolute before:top-0 before:h-[2px] before:w-[50000vw] before:bg-white before:content-[''] after:absolute after:top-[100%] after:h-[2px] after:w-[50000vw] after:bg-white after:content-[''] lg:h-[80%]">
-        <li>Project 01</li>
-        <li>Project 02</li>
-        <li>Project 03</li>
-        <li>...</li>
-      </ol>
+      <div className="relative mb-0 flex w-full gap-10 before:absolute before:top-0 before:h-[2px] before:w-[50000vw] before:bg-white before:content-[''] after:absolute after:top-[100%] after:h-[2px] after:w-[50000vw] after:bg-white after:content-[''] lg:h-[80%]">
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+      </div>
     </section>
   );
 };
