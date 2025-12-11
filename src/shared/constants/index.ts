@@ -1,1 +1,2 @@
-export { TECH_STACKS, TECH_ROLE, type TechStack } from './tech';
+export { TECH_STACKS, type TechStack } from './tech';
+export { PROJECT_ROLE, type ProjectRole } from './projects';

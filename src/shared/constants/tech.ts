@@ -15,8 +15,4 @@ export const TECH_STACKS = [
   'MySQL',
 ] as const;
 
-export const TECH_ROLE = ['FRONTEND', 'BACKEND', 'FULLSTACK'] as const;
-
 export type TechStack = (typeof TECH_STACKS)[number];
-
-export type TechRole = (typeof TECH_ROLE)[number];
