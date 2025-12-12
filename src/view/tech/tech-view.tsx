@@ -7,7 +7,7 @@ export const TechView = () => {
     <section
       id="tech-section"
       aria-labelledby="tech-heading"
-      className="lex mx-auto mb-32 w-full max-w-3xl flex-col justify-center gap-5 px-4 sm:px-8 md:max-w-4xl md:px-10 lg:mb-0 lg:max-w-4xl"
+      className="col-span-12 lex mx-auto mb-32 w-full max-w-3xl flex-col justify-center gap-5 px-4 sm:px-8 md:max-w-4xl md:px-10 lg:mb-0 lg:max-w-4xl"
     >
       <header className="pt-20 pb-10 lg:pt-5">
         <h2 className="w-fit pb-3 text-2xl font-bold lg:pb-8 lg:text-4xl">
