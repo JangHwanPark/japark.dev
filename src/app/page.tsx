@@ -5,11 +5,11 @@ import React from "react";
 export default function Home() {
   return (
     <main className="grid grid-cols-12 mx-auto max-w-screen-xl gap-x-6 gap-y-16 px-4 sm:px-8">
-      <Line.Linear />
+      <Line.Linear/>
       <OriginView/>
-      <Line.Root className="relative w-full lg:block">
-        <Line.CurveFirst className="h-52 lg:ml-38 lg:w-8/12 xl:ml-112 xl:w-6/12" />
-        <Line.CurveLast className="h-72 w-4/12 lg:ml-38 xl:ml-112" />
+      <Line.Root className="w-full col-span-8 col-start-3">
+        <Line.CurveFirst className="h-52"/>
+        <Line.CurveLast className="h-72"/>
       </Line.Root>
       <TechView/>
       <PlaygroundView/>
