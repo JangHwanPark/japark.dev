@@ -29,7 +29,7 @@ const LineCurveFirst = ({ className }: LineProps) => {
   return (
     <div
       role="presentation"
-      className={cn(className, 'h-1/2 border-r-2 border-b-2')}
+      className={cn(className, 'border-r-2 border-b-2')}
       aria-hidden={true}
     />
   );
@@ -37,7 +37,7 @@ const LineCurveFirst = ({ className }: LineProps) => {
 
 const LineCurveLast = ({ className }: LineProps) => {
   return (
-    <div role="presentation" className={cn(className, 'h-1/2 border-l-2')} aria-hidden={true} />
+    <div role="presentation" className={cn(className, 'border-l-2')} aria-hidden={true} />
   );
 };
 

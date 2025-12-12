@@ -43,7 +43,7 @@ export const MilestonesView = () => {
         '<'
       );
 
-    const items = gsap.utils.toArray('li', {scope: sectionRef.current});
+    const items = gsap.utils.toArray('li', sectionRef.current);
     items.forEach((item) => {
       gsap.fromTo(
         item as HTMLLIElement,
@@ -65,7 +65,7 @@ export const MilestonesView = () => {
   }, []);
 
   return (
-    <section id="milestone-section"
+    <section ref={sectionRef} id="milestone-section"
              className="col-span-12 w-full max-w-screen-xl relative mx-auto mt-40 mb-28 flex flex-col items-center justify-center px-12 py-4 opacity-100 sm:px-8 md:px-20 lg:mt-0 lg:px-0 lg:py-[60px] xl:mb-32">
       <header>
         <h2
@@ -76,8 +76,10 @@ export const MilestonesView = () => {
       <div className="w-full relative mx-auto flex flex-col">
         {/* TimeLine */}
         <div
+          ref={timelineRef}
           className="from-white-bg via-accent absolute top-0 -left-3 h-full w-[3px] -translate-x-1/2 transform bg-[#F4B400] bg-gradient-to-t to-transparent md:-left-10 lg:top-[-50px] lg:left-1/2"/>
         <div
+          ref={dotRef}
           className="absolute -left-3 h-[10px] w-[10px] -translate-x-1/2 transform rounded-full bg-[#ffd700] shadow-[0_0_5px_2px_#ffd700,0_0_15px_8px_#ffcc00,0_0_110px_20px_#ffeb3b] md:-left-10 lg:top-[-50px] lg:left-1/2"/>
         {/* Career */}
         <ol className="space-y-12 md:space-y-16 lg:space-y-32">
