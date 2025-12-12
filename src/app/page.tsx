@@ -1,14 +1,19 @@
-import { MilestonesView, OriginView, PlaygroundView, TechView } from '@/view';
+import {MilestonesView, OriginView, PlaygroundView, TechView} from '@/view';
+import {Line} from "@/shared";
+import React from "react";
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-sans sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-        <OriginView />
-        <TechView />
-        <PlaygroundView />
-        <MilestonesView />
-      </main>
-    </div>
+    <main className="grid grid-cols-12 mx-auto max-w-screen-xl gap-x-6 gap-y-16 px-4 sm:px-8">
+      <Line.Linear />
+      <OriginView/>
+      <Line.Root className="relative w-full lg:block">
+        <Line.CurveFirst className="h-52 lg:ml-38 lg:w-8/12 xl:ml-112 xl:w-6/12" />
+        <Line.CurveLast className="h-72 w-4/12 lg:ml-38 xl:ml-112" />
+      </Line.Root>
+      <TechView/>
+      <PlaygroundView/>
+      <MilestonesView/>
+    </main>
   );
 }
