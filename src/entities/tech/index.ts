@@ -1,0 +1,1 @@
+export {TechSchema, type Tech } from './schema';
