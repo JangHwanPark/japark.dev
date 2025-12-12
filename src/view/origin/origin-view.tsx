@@ -8,7 +8,7 @@ export const OriginView = () => {
   return (
     <>
       <Line.Linear />
-      <section id="origin-section" aria-labelledby="origin-heading">
+      <section id="origin-section" aria-labelledby="origin-heading" className='col-span-12'>
         <div className="mt-24 flex w-full flex-col-reverse items-center justify-center gap-10 px-4 py-16 sm:px-8 lg:mt-0 lg:mb-10 lg:min-h-[500px] lg:flex-row lg:gap-5 lg:py-0 xl:mb-0 xl:gap-10">
           <div className="relative flex flex-col items-center justify-center md:gap-5 lg:gap-2">
             <header className="flex flex-col gap-1 lg:gap-2">

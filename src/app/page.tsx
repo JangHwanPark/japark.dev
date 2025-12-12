@@ -1,14 +1,12 @@
-import { MilestonesView, OriginView, PlaygroundView, TechView } from '@/view';
+import {MilestonesView, OriginView, PlaygroundView, TechView} from '@/view';
 
 export default function Home() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-sans sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-        <OriginView />
-        <TechView />
-        <PlaygroundView />
-        <MilestonesView />
-      </main>
-    </div>
+    <main className="grid grid-cols-12 mx-auto max-w-screen-xl gap-x-6 gap-y-16 px-4 sm:px-8">
+      <OriginView/>
+      <TechView/>
+      <PlaygroundView/>
+      <MilestonesView/>
+    </main>
   );
 }

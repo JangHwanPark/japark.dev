@@ -2,7 +2,7 @@ import React from 'react';
 
 export const MilestonesView = () => {
   return (
-    <section id="milestone-section" className="relative mx-auto mt-40 mb-28 flex h-auto flex-col items-center justify-center px-12 py-4 opacity-100 sm:px-8 md:px-20 lg:mt-0 lg:px-0 lg:py-[60px] xl:mb-32">
+    <section id="milestone-section" className="col-span-12 relative mx-auto mt-40 mb-28 flex h-auto flex-col items-center justify-center px-12 py-4 opacity-100 sm:px-8 md:px-20 lg:mt-0 lg:px-0 lg:py-[60px] xl:mb-32">
       <header>
         <h2 className="xs:text-left mt-32 mb-12 bg-gradient-to-b from-[#F4B400] to-white bg-clip-text text-4xl leading-10 font-bold text-transparent md:text-center lg:mb-24 lg:text-6xl lg:leading-14 xl:leading-[70px] 2xl:text-7xl">Career timeline</h2>
       </header>
