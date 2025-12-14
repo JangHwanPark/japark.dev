@@ -76,9 +76,8 @@ export const OriginView = () => {
             </p>
           </header>
           <div className="text-t-sub mt-6 max-w-lg text-base leading-7 lg:mt-0 xl:max-w-2xl">
-            <p className="desc-line mb-1 font-semibold">제 홈페이지에 방문해 주셔서 감사합니다.</p>
             <p className="desc-line xs:text-sm text-t-sub text-wt-primary-light leading-8 font-normal break-keep sm:text-base md:relative md:z-20 lg:text-lg xl:text-xl">
-              저는 데이터를 시각화하고, 더 나은 UI를 설계하며 사용자 입장에서 경험을 고민하는
+              데이터를 시각화하고, 더 나은 UI를 설계하며 사용자 입장에서 경험을 고민하는
               프론트엔드 개발자입니다. 이 포트폴리오에는 제가 고민해 온 방식과 성장의 흔적들이
               담겨 있습니다.
             </p>
