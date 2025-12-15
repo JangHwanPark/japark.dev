@@ -67,7 +67,7 @@ export const OriginView = () => {
               id="origin-heading"
               className="flex flex-col gap-2 text-t-primary text-xl font-bold sm:text-2xl md:text-3xl lg:leading-tight"
             >
-              <span className="title-line block">안녕하세요. 데이터를 조각하는</span>
+              <span className="title-line block">데이터를 조각하는</span>
               <span className="title-line block">프론트엔드 개발자 박장환입니다.</span>
             </h2>
             <p className="flex flex-col gap-2 text-t-sub text-wt-primary-light mt-4 text-lg font-medium sm:text-xl md:text-3xl xl:text-4xl">
