@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className='w-full min-h-screen bg-gray-50 dark:bg-gray-900'>
+        <div className='w-full min-h-screen'>
           <div className="grid grid-cols-12 mx-auto max-w-5xl gap-x-6 gap-y-16 px-4 sm:px-8">
             <Header />
           {children}
