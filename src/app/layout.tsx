@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import type {Metadata} from 'next';
+import {Geist, Geist_Mono} from 'next/font/google';
 import './globals.css';
-import { Header } from '@/widgets/layout/header';
-import { ReactNode } from 'react';
-import { Footer } from '@/widgets/layout';
+import {Header} from '@/widgets/layout/header';
+import {ReactNode} from 'react';
+import {Footer} from '@/widgets/layout';
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -21,21 +21,17 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-  children,
-}: Readonly<{
+                                     children,
+                                   }: Readonly<{
   children: ReactNode;
 }>) {
   return (
     <html lang="ko">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <div className='w-full min-h-screen'>
-          <div className="grid grid-cols-12 mx-auto max-w-5xl gap-x-6 gap-y-16 px-4 sm:px-8">
-            <Header />
-          {children}
-          <Footer />
-          </div>
-        </div>
-      </body>
+    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <Header/>
+    {children}
+    <Footer/>
+    </body>
     </html>
   );
 }
