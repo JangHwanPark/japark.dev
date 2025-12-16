@@ -2,26 +2,72 @@
 import React, {useRef} from 'react';
 import {Avatar, cn} from '@/shared';
 
-const imgSize =
-  'rounded-full lg:rounded-lg w-62 h-62 sm:w-80 sm:h-80 lg:w-[410px] xl:w-[410px] lg:h-[410px] xl:h-[450px]';
+const LEANING = ['Iteration Pattern', 'CodeTree Trail 3'];
+const ALGORITHM = ['BOJ', 'LeetCode', 'Programmers', 'CodeTree'];
+
+const card = 'p-6 rounded-3xl bg-bg-2/40 backdrop-blur-md relative overflow-hidden shadow-md transition will-change-transform' +
+  ' hover:-translate-y-0.5 hover:border-bg-3 hover:bg-bg-2/55 hover:shadow-2';
 
 export const AboutView = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   return (
-    <section ref={sectionRef} id="about-section" aria-labelledby="origin-heading" className='col-span-12'>
-      <div>
-        <p>About</p>
-        <h2 className='sr-only'>About</h2>
-        <div className='grid grid-cols-6 grid-rows-5 gap-10'>
-          <div className='col-span-4 row-span-2 border'>소개</div>
-          <div className='col-span-2 row-span-3 border'>이미지</div>
-          <div className='col-span-2 row-span-1 border'>위치 시간</div>
-          <div className='col-span-2 row-span-2 border'>대표 프로젝트</div>
-          <div className='col-span-2 row-span-1 border'>공부중</div>
-          <div className='col-span-2 row-span-1 border'>알고리즘</div>
-          <div className='col-span-6 row-span-1 border'>기술 스택</div>
-        </div>
+    <section ref={sectionRef} id="about-section" aria-labelledby="origin-heading" className='col-span-12 flex flex-col'>
+      <p className='blur-text text-3xl sm:text-4xl md:text-5xl text-gray-800 font-heading font-normal mb-6 flex flex-wrap justify-start'>About</p>
+      <h2 id="about-heading" className="sr-only">About</h2>
+      <div className='grid grid-cols-6 gap-4 max-w-5xl'>
+        <article className={cn(card, 'col-span-4 row-span-2 border')}>
+          <div className='flex flex-col text-3xl md:text-4xl break-words whitespace-pre-line leading-tight cursor-default'>
+            <span>데이터를 조각하여 경험을 만들고</span>
+            <span>경험을 연결하여 가치를 만듭니다.</span>
+          </div>
+          <p className='text-lg mt-4 max-w-2xl'>단순한 기능 구현을 넘어, 사용자가 머무르고 싶은 UI를 만듭니다. 데이터와 사람을 연결하는 과정에 즐거움을 느끼는 프론트엔드 개발자입니다.</p>
+        </article>
+        <article className={cn(card, 'col-span-1 sm:col-span-1 lg:col-span-2 lg:row-span-1 flex flex-col')}>
+          <div className='flex flex-col gap-2'>
+            <h3>백그라운드</h3>
+            <p>Game Play QA</p>
+          </div>
+        </article>
+        <article className={cn(card, 'p-0 col-span-2 row-span-2')}>
+          <Avatar.Root className='rounded-2xl'>
+            <Avatar.Image
+              src="/images/profile.webp"
+              alt="프로필 이미지"
+              className='rounded-2xl object-cover'
+            />
+            <Avatar.Fallback>JangHwan Park</Avatar.Fallback>
+          </Avatar.Root>
+        </article>
+        <article className={cn(card, 'col-span-2 row-span-1 border')}>
+          <div className='flex flex-col gap-2'>
+            <h3>현재 관심사</h3>
+            <p>Iteration Pattern</p>
+          </div>
+        </article>
+        <article className={cn(card, 'col-span-2 row-span-2 border')}>
+          <h3>대표 프로젝트</h3>
+          <Avatar.Root className='rounded-2xl'>
+            <Avatar.Image
+              src="/images/testea_temp.png"
+              alt="대표 프로젝트"
+              className='rounded-2xl object-cover'
+            />
+            <Avatar.Fallback>testea</Avatar.Fallback>
+          </Avatar.Root>
+        </article>
+        <article className={cn(card, 'col-span-2 row-span-1 border')}>
+          <div className='flex flex-col gap-2'>
+            <h3>문제 해결</h3>
+            <p>LeetCode</p>
+          </div>
+        </article>
+        <article className={cn(card, 'col-span-2 row-span-1 border')}>
+          <div className='flex gap-2'>
+            <div>깃허브</div>
+            <div>링크드인</div>
+          </div>
+        </article>
       </div>
     </section>
   );
