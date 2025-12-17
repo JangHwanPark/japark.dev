@@ -26,17 +26,18 @@ import {
   SiVitest,
   SiJest,
   SiAmazonec2,
-  SiMysql,
   SiMongodb,
   SiExpress,
+  SiTypescript
 } from 'react-icons/si';
+import { GrMysql } from "react-icons/gr";
 import { IconType } from 'react-icons';
 
 const iconMap: Record<string, IconType> = {
   html: FaHtml5,
   css: FaCss3Alt,
   javascript: FaJs,
-  typescript: FaJs,
+  typescript: SiTypescript,
   react: FaReact,
   nextjs: RiNextjsFill,
   tailwindcss: RiTailwindCssFill,
@@ -56,7 +57,7 @@ const iconMap: Record<string, IconType> = {
   testrail: SiTestrail,
   vitest: SiVitest,
   jest: SiJest,
-  mysql: SiMysql,
+  mysql: GrMysql,
   mongodb: SiMongodb,
   express: SiExpress,
 };
