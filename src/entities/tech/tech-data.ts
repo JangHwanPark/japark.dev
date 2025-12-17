@@ -37,7 +37,7 @@ export const FRONTEND = [
   },
   {
     id: 'tailwindcss',
-    label: 'Tailwind CSS',
+    label: 'TailwindCSS',
     color: 'text-sky-400',
     usage: 'frequent',
   },
@@ -46,13 +46,19 @@ export const FRONTEND = [
 export const BACKEND = [
   {
     id: 'nodejs',
-    label: 'Node.js (Express)',
+    label: 'Node.js',
+    color: 'text-green-500',
+    usage: 'familiar',
+  },
+  {
+    id: 'express',
+    label: 'Express.js',
     color: 'text-green-500',
     usage: 'familiar',
   },
   {
     id: 'spring',
-    label: 'Spring',
+    label: 'SpringBoot',
     color: 'text-[#6DB33F]',
     usage: 'familiar',
   },
@@ -78,20 +84,20 @@ export const BACKEND = [
 
 export const DEVOPS = [
   {
-    id: 'linux',
-    label: 'Linux (Ubuntu)',
+    id: 'ubuntu',
+    label: 'Ubuntu',
     color: 'text-orange-500',
     usage: 'familiar',
   },
   {
-    id: 'aws',
-    label: 'AWS (EC2, S3, RDS)',
+    id: 'ec2',
+    label: 'EC2',
     color: 'text-orange-600',
     usage: 'familiar',
   },
   {
     id: 'ncp',
-    label: 'NCP (Server)',
+    label: 'NCP',
     color: 'text-green-500',
     usage: 'familiar',
   },
@@ -106,7 +112,7 @@ export const TOOL = [
   },
   {
     id: 'git',
-    label: 'Git / GitHub',
+    label: 'Git/GitHub',
     color: 'text-red-600',
     usage: 'frequent',
   },
@@ -171,3 +177,11 @@ export const TECH = {
   TOOL,
   TESTING,
 }
+
+export const TECH_ALL = [
+  ...FRONTEND,
+  ...BACKEND,
+  ...DEVOPS,
+  ...TOOL,
+  ...TESTING,
+];
