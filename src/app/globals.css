@@ -9,9 +9,29 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1536px;
 
-  --color-primary: #aa42ff;
-  --color-primary-light: #d29bff;
-  --color-primary-soft: #f2c0ff;
+  --color-primary-50: #eef2ff;
+  --color-primary-100: #e0e7ff;
+  --color-primary-200: #c7d2fe;
+  --color-primary-300: #a5b4fc;
+  --color-primary-400: #818cf8;
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
+  --color-primary-800: #3730a3;
+  --color-primary-900: #312e81;
+  --color-primary: #6366f1;
+
+  --color-accent-50: #f8fafc;
+  --color-accent-100: #f1f5f9;
+  --color-accent-200: #e2e8f0;
+  --color-accent-300: #cbd5e1;
+  --color-accent-400: #94a3b8;
+  --color-accent-500: #64748b;
+  --color-accent-600: #475569;
+  --color-accent-700: #334155;
+  --color-accent-800: #1e293b;
+  --color-accent-900: #0f172a;
+  --color-accent: #64748b;
 
   --color-dk-primary: #0b080c;
   --color-dk-primary-light: #1b1a22;
@@ -20,13 +40,41 @@
   --color-wt-primary: #f0f1f2;
   --color-wt-primary-light: #a1a6b4;
 
-  --color-yellow: #ffd700;
-  --color-acccent: #08d9d6;
-  --color-success: #4caf50;
-  --color-warning: #ff9f43;
-  --color-danger: #e74c3c;
+  /* 순백 - 메인 배경 */
+  --color-bg-1: #ffffff;
+  /* 약간 회색 - 카드 배경 */
+  --color-bg-2: #f8f9fa;
+  /* 중간 회색 - 호버/보더 */
+  --color-bg-3: #e9ecef;
+  /* 진한 회색 - 서브 요소 */
+  --color-bg-4: #dee2e6;
+
+  /* 거의 검정 - 메인 텍스트 */
+  --color-text-1: #1f2937;
+  /* 진한 회색 - 서브 텍스트 */
+  --color-text-2: #4b5563;
+  /* 중간 회색 - 보조 텍스트 */
+  --color-text-3: #6b7280;
+  /* 연한 회색 - 비활성 텍스트 */
+  --color-text-4: #9ca3af;
+
+  /* Success, Warning, Error */
+  --color-success: #10b981;
+  --color-success-light: #d1fae5;
+  --color-success-dark: #065f46;
+
+  --color-warning: #f59e0b;
+  --color-warning-light: #fef3c7;
+  --color-warning-dark: #92400e;
+
+  --color-error: #ef4444;
+  --color-error-light: #fee2e2;
+  --color-error-dark: #991b1b;
 
   --animate-marquee: marquee 100s linear infinite;
+  --animate-fade-in: fade-in 0.5s ease-in-out;
+  --animate-slide-up: slide-up 0.5s ease-out;
+  --animate-scale-in: scale-in 0.3s ease-out;
 
   @keyframes marquee {
     from {
@@ -34,6 +82,37 @@
     }
     to {
       transform: translateX(-50%);
+    }
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-up {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
     }
   }
 }
@@ -80,6 +159,38 @@
   }
 }
 
+@layer utilities {
+  .bg-gradient-primary {
+    background-image: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  }
+
+  .bg-gradient-accent {
+    background-image: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
+  }
+
+  .bg-gradient-dark {
+    background-image: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  }
+
+  .bg-gradient-card {
+    background-image: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(30, 41, 59, 0.3) 100%);
+  }
+
+  .text-gradient-primary {
+    background-image: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .text-gradient-accent {
+    background-image: linear-gradient(135deg, #ec4899 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+}
+
 .fade-mask {
   -webkit-mask-image: -webkit-linear-gradient(
           to right,
@@ -96,4 +207,22 @@
           black 90%,
           transparent 100%
   )
+}
+
+/* 스크롤바 */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-bg-3);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-bg-4);
 }
