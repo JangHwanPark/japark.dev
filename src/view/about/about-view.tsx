@@ -1,6 +1,8 @@
 'use client';
 import React, {useRef} from 'react';
 import {Avatar, cn} from '@/shared';
+import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const LEANING = ['Iteration Pattern', 'CodeTree Trail 3'];
 const ALGORITHM = ['BOJ', 'LeetCode', 'Programmers', 'CodeTree'];
@@ -13,7 +15,6 @@ export const AboutView = () => {
 
   return (
     <section ref={sectionRef} id="about-section" aria-labelledby="origin-heading" className='col-span-12 flex flex-col'>
-      <p className='blur-text text-3xl sm:text-4xl md:text-5xl text-gray-800 font-heading font-normal mb-6 flex flex-wrap justify-start'>About</p>
       <h2 id="about-heading" className="sr-only">About</h2>
       <div className='grid grid-cols-6 gap-4 max-w-5xl'>
         <article className={cn(card, 'col-span-4 row-span-2 border')}>
@@ -30,11 +31,11 @@ export const AboutView = () => {
           </div>
         </article>
         <article className={cn(card, 'p-0 col-span-2 row-span-2')}>
-          <Avatar.Root className='rounded-2xl'>
+          <Avatar.Root className='aspect-square w-full h-full rounded-2xl'>
             <Avatar.Image
               src="/images/profile.webp"
               alt="프로필 이미지"
-              className='rounded-2xl object-cover'
+              className='rounded-2xl object-cover w-full h-full'
             />
             <Avatar.Fallback>JangHwan Park</Avatar.Fallback>
           </Avatar.Root>
@@ -62,10 +63,18 @@ export const AboutView = () => {
             <p>LeetCode</p>
           </div>
         </article>
-        <article className={cn(card, 'col-span-2 row-span-1 border')}>
-          <div className='flex gap-2'>
-            <div>깃허브</div>
-            <div>링크드인</div>
+        <article className='p-6 col-span-2 row-span-1'>
+          <div className='h-full flex items-center gap-6'>
+            <div>
+              <Link href='#'>
+                <FaGithub className='w-12 h-12'/>
+              </Link>
+            </div>
+            <div>
+              <Link href='#'>
+                <FaLinkedin className='w-12 h-12'/>
+              </Link>
+            </div>
           </div>
         </article>
       </div>
