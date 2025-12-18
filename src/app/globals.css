@@ -25,6 +25,17 @@
   --color-success: #4caf50;
   --color-warning: #ff9f43;
   --color-danger: #e74c3c;
+
+  --animate-marquee: marquee 100s linear infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
 }
 
 /* HTML Elements */
@@ -69,16 +80,20 @@
   }
 }
 
-@utility sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  /* 최신 브라우저 표준(필요하면 사용) */
-  /* clip-path: inset(50%); */
-  white-space: nowrap;
-  border: 0;
+.fade-mask {
+  -webkit-mask-image: -webkit-linear-gradient(
+          to right,
+          transparent 0%,
+          black 10%,
+          black 90%,
+          transparent 100%
+  );
+
+  mask-image: linear-gradient(
+          to right,
+          transparent 0%,
+          black 10%,
+          black 90%,
+          transparent 100%
+  )
 }
