@@ -4,8 +4,8 @@ import { GlobalNavbar } from '@/widgets/layout/global-navbar/global-navbar';
 
 export const Header = () => {
   return (
-    <header className="col-span-12 w-full pb-5">
-      <div className="xs:px-3 flex items-center justify-between pt-5 sm:px-10 xl:px-20">
+    <header className="sticky top-0 z-100 py-4 shadow-md backdrop-blur-md backdrop-filter backdrop-saturate-150">
+      <div className="px-4 sm:px-8 max-w-5xl mx-auto flex items-center justify-between">
         <Logo />
         <GlobalNavbar />
       </div>

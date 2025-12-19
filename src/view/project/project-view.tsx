@@ -59,12 +59,17 @@ export const ProjectView = () => {
                 <div
                   className='group cursor-none col-span-2 row-span-2 relative overflow-hidden rounded-xl border border-[var(--color-dk-primary-soft)] min-h-[300px] shadow-lg transition-all duration-300 hover:border-[var(--color-primary)] hover:shadow-[0_0_15px_rgba(170,66,255,0.3)]'
                 >
-                  <Image
-                    src={project.src}
-                    alt={project.title}
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105 group-data-[state=delayed-open]:scale-105 opacity-90 group-hover:opacity-100"
-                  />
+                  <div className="absolute inset-0 p-6">
+                    <div className="relative h-full w-full">
+                      <Image
+                        src={project.src}
+                        alt={project.title}
+                        fill
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        className="object-contain transition-transform duration-700 group-hover:scale-[1.02]"
+                      />
+                    </div>
+                  </div>
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-300"/>
                 </div>
               </Tooltip.Trigger>

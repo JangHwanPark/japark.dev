@@ -1,19 +1,18 @@
 import type {Metadata} from 'next';
-import {Geist, Geist_Mono} from 'next/font/google';
+import {IBM_Plex_Sans_KR} from 'next/font/google';
 import './globals.css';
 import {Header} from '@/widgets/layout/header';
 import {ReactNode} from 'react';
 import {Footer} from '@/widgets/layout';
+import {cn} from "@/shared";
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const mainFont = IBM_Plex_Sans_KR({
+  weight: ['300','400','500','600','700'],
   subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-main',
 });
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -26,8 +25,8 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html lang="ko">
-    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <html lang="ko" className={cn(mainFont.variable, 'antialiased')}>
+    <body className='font-[var(--font-main)]'>
     <Header/>
     {children}
     <Footer/>
