@@ -4,10 +4,10 @@ import {Avatar, cn} from '@/shared';
 import Link from "next/link";
 import {FaGithub, FaLinkedin} from "react-icons/fa";
 
-const LEARNING = ['Iteration Pattern', 'CodeTree Trail 3'];
-const ALGORITHM = ['BOJ', 'LeetCode', 'Programmers', 'CodeTree'];
+const LEARNING = ['Iteration Pattern'];
+const ALGORITHM = ['BOJ', 'LeetCode', 'Programmers', 'CodeTree Trail 3'];
 
-const card = 'p-6 rounded-3xl glass relative overflow-hidden shadow-[var(--shadow-card)] transition-all duration-300 will-change-transform' +
+const card = 'bg-bg-2 p-6 rounded-3xl glass relative overflow-hidden shadow-[var(--shadow-card)] transition-all duration-300 will-change-transform' +
   ' hover:-translate-y-1 hover:glass-hover hover:shadow-[var(--shadow-card-hover)]';
 
 export const AboutView = () => {
@@ -19,6 +19,10 @@ export const AboutView = () => {
       <div className='grid grid-cols-6 gap-4 max-w-5xl'>
         <article className={cn(card, 'col-span-4 row-span-2')}>
           <div className='flex flex-col justify-center h-full gap-6'>
+            <div className='flex items-center gap-2 text-xs text-text-3'>
+              <span className='w-2 h-2 rounded-full bg-primary'></span>
+              <span>사용자 중심 사고</span>
+            </div>
             <div className='flex flex-col text-3xl md:text-4xl break-words whitespace-pre-line leading-tight font-bold'>
               <span>
                 데이터를 조각하여 경험을 만들고
@@ -27,31 +31,23 @@ export const AboutView = () => {
                 경험을 연결하여 가치를 만듭니다.
               </span>
             </div>
-            <div className='flex items-center gap-2 text-xs text-text-3'>
-              <span className='w-2 h-2 rounded-full bg-primary'></span>
-              <span>사용자 중심 사고</span>
-            </div>
             <div className='flex flex-col gap-4 text-base md:text-lg leading-relaxed text-text-2'>
               <p className='max-w-2xl'>
                 단순한 기능 구현을 넘어, <span className='font-semibold text-text-1'>사용자가 머무르고 싶은 UI</span>를 만듭니다.
                 데이터와 사람을 연결하는 과정에 즐거움을 느끼는 프론트엔드 개발자입니다.
-              </p>
-
-              <p className='max-w-2xl'>
                 게임 QA 경험을 통해 <span className='font-semibold text-text-1'>사용자 관점의 디테일</span>을 체득했으며,
                 복잡한 데이터를 직관적인 인터페이스로 풀어내는 것을 좋아합니다.
               </p>
-
               <p className='max-w-2xl'>
-                <span className='font-semibold text-text-1'>지식을 공유하고 함께 성장하는 것</span>에 가치를 두며,
-                언젠가 개발자를 양성하는 교수가 되는 것이 꿈입니다.
-              </p>
-
-              <p className='max-w-2xl'>
-                비즈니스 속도에 맞춰 <span className='font-semibold text-text-1'>빠르게 실행하고 점진적으로 개선</span>하는 방식을 선호합니다.
+                비즈니스 속도에 맞춰 <span className='font-semibold text-text-1'>빠르게 실행하고 점진적으로 개선</span>하는 방식을 선호하고,
                 확장 가능한 기반 위에서 지속적으로 발전하는 코드를 지향합니다.
               </p>
+              <p className='max-w-2xl'>
+                <span className='font-semibold text-text-1'>지식을 공유하고 함께 성장하는 문화</span>를 중요하게 생각합니다.
+                제가 이해한 내용을 문서와 예제로 정리해 팀이 더 빠르게 합의하고, 더 적게 헤매도록 돕는 과정에서 큰 즐거움을 느낍니다.
+              </p>
             </div>
+
           </div>
         </article>
         <article className={cn(card, 'col-span-2 row-span-1 flex flex-col')}>
@@ -100,7 +96,7 @@ export const AboutView = () => {
               <div className='space-y-3'>
                 <p className='text-base font-semibold text-text-1 leading-relaxed'>
                   실험을 통해 성장하고
-                  <br />
+                  <br/>
                   필요한 만큼만 적용합니다
                 </p>
               </div>
