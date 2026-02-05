@@ -7,7 +7,7 @@ import {FaGithub, FaLinkedin} from "react-icons/fa";
 const LEARNING = ['Iteration Pattern', 'CodeTree Trail 3'];
 const ALGORITHM = ['BOJ', 'LeetCode'];
 
-const card = 'bg-bg-2 p-6 rounded-3xl glass relative overflow-hidden shadow-[var(--shadow-card)] transition-all duration-300 will-change-transform' +
+const card = 'bg-bg-2 p-6 rounded-2xl glass relative overflow-hidden shadow-[var(--shadow-card)] transition-all duration-300 will-change-transform' +
   ' hover:-translate-y-1 hover:glass-hover hover:shadow-[var(--shadow-card-hover)]';
 
 export const AboutView = () => {
@@ -35,11 +35,11 @@ export const AboutView = () => {
           </div>
         </article>
         <article className={cn(card, 'p-0 col-span-2 row-span-3 overflow-hidden group')}>
-          <Avatar.Root className='aspect-square rounded-3xl '>
+          <Avatar.Root className='aspect-square rounded-2xl '>
             <Avatar.Image
               src="/images/profile.webp"
               alt="프로필 이미지"
-              className='rounded-3xl object-cover w-full h-full transition-transform duration-500 group-hover:scale-105'
+              className='rounded-2xl object-cover w-full h-full transition-transform duration-500 group-hover:scale-105'
             />
             <Avatar.Fallback className='text-text-3'>JangHwan Park</Avatar.Fallback>
           </Avatar.Root>
