@@ -6,11 +6,11 @@ const SLIDER_ITEM = [...TECH_ALL, ...TECH_ALL];
 
 export const TechSlider = () => {
   return (
-    <div className='col-span-12 overflow-x-hidden flex py-6 fade-mask' aria-hidden={true}>
+    <div className='col-span-12 h-[var(--height-slider)] md:h-[var(--height-slider-md)] lg:h-[var(--height-slider-lg)] overflow-x-hidden flex items-center fade-mask' aria-hidden={true}>
       <div className='flex gap-10 justify-center [animation:var(--animate-marquee)]'>
         {SLIDER_ITEM.map((item, index) => (
-          <div key={`${item.id}-${index}`} className='w-fit flex items-center gap-2 text-5xl font-black'>
-            <TechUi id={item.id} className='w-12 h-12'/>
+          <div key={`${item.id}-${index}`} className='w-fit flex items-center gap-2 text-3xl md:text-4xl lg:text-5xl font-black'>
+            <TechUi id={item.id} className='w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12'/>
             <span>{item.label.toUpperCase()}</span>
           </div>
         ))}
