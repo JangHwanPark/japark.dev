@@ -41,7 +41,7 @@ export const MobileNavbar = ({ items }: MobileNavbarProps) => {
               {items.map(item => (
                 <li
                   key={item.title}
-                  className={cn('md:font-base p-0 text-center text-5xl font-semibold md:text-lg')}
+                  className={cn('md:font-base p-0 text-center text-2xl font-semibold')}
                 >
                   <Link
                     href={item.href}

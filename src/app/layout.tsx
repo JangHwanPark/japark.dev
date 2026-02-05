@@ -27,9 +27,7 @@ export default function RootLayout({
   return (
     <html lang="ko" className={cn(mainFont.variable, 'antialiased')}>
     <body className='font-[var(--font-main)]'>
-    <Header/>
     {children}
-    <Footer/>
     </body>
     </html>
   );

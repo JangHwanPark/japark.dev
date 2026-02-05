@@ -14,7 +14,7 @@ export const DesktopNavbar = ({ items }: DesktopNavbarProps) => {
       {items.map(item => (
         <li
           key={item.title}
-          className={cn('md:font-base p-0 text-center text-5xl font-semibold md:text-lg')}
+          className={cn('md:font-base p-0 text-center font-semibold')}
         >
           <Link
             href={item.href}
