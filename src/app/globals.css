@@ -72,6 +72,8 @@
   --color-error-dark: #991b1b;
 
   --animate-marquee: marquee 100s linear infinite;
+  --animate-vertical-loop: vertical-loop 8s linear infinite;
+  --animate-vertical-step: vertical-step-loop 8s ease-in-out infinite;
   --animate-fade-in: fade-in 0.5s ease-in-out;
   --animate-slide-up: slide-up 0.5s ease-out;
   --animate-scale-in: scale-in 0.3s ease-out;
@@ -84,6 +86,53 @@
       transform: translateX(-50%);
     }
   }
+
+  @keyframes vertical-loop {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-50%);
+    }
+  }
+
+  @keyframes vertical-step-loop {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(0);
+  }
+
+  25% {
+    transform: translateY(-40px);
+  }
+
+  45% {
+    transform: translateY(-40px);
+  }
+
+  50% {
+    transform: translateY(-80px);
+  }
+
+  70% {
+    transform: translateY(-80px);
+  }
+
+  75% {
+    transform: translateY(-120px);
+  }
+
+  95% {
+    transform: translateY(-120px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
 
   @keyframes fade-in {
     from {
@@ -160,38 +209,18 @@
 }
 
 @layer utilities {
-  .bg-gradient-primary {
-    background-image: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  .vertical-loop {
+    overflow: hidden;
+    position: relative;
   }
 
-  .bg-gradient-accent {
-    background-image: linear-gradient(135deg, #ec4899 0%, #f59e0b 100%);
+  .vertical-loop-track {
+    display: flex;
+    flex-direction: column;
+    will-change: transform;
   }
 
-  .bg-gradient-dark {
-    background-image: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-  }
-
-  .bg-gradient-card {
-    background-image: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(30, 41, 59, 0.3) 100%);
-  }
-
-  .text-gradient-primary {
-    background-image: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .text-gradient-accent {
-    background-image: linear-gradient(135deg, #ec4899 0%, #6366f1 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-}
-
-.fade-mask {
+  .fade-mask {
   -webkit-mask-image: -webkit-linear-gradient(
           to right,
           transparent 0%,
@@ -207,6 +236,7 @@
           black 90%,
           transparent 100%
   )
+}
 }
 
 /* 스크롤바 */
