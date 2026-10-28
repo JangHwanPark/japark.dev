@@ -72,5 +72,10 @@
     "tailwindcss": "^4",
     "typescript": "^5",
     "vitest": "^4.0.15"
+  },
+  "pnpm": {
+    "overrides": {
+      "next>postcss": "^8.5.32"
+    }
   }
 }
